@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 	<StackPanel>
-		<Button Content="Oglasi alaram" Click="Zvrrr"/>
+		<Button Name="dugme" Content="Oglasi alaram"/>
+		<Button Name="d2" Content="Oglasi alarm2"/>
 		<UniformGrid Columns="2">
 			<Label Content="Civil1: "/>
 			<Label Content="{Binding Source={StaticResource c1}, Path=Status}"/>
@@ -15,6 +16,8 @@
 			<Label Content="{Binding Source={StaticResource c2}, Path=Status}"/>
 			<Label Content="Vatrogasac1: "/>
 			<Label Content="{Binding Source={StaticResource v1}, Path=Status}"/>
+			<Label Content="Civil3: "/>
+			<Label Content="{Binding Source={StaticResource c3}, Path=Status}"/>
 		</UniformGrid>
 	</StackPanel>
 </Window>

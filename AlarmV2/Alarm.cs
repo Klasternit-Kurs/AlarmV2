@@ -8,13 +8,21 @@ namespace AlarmV2
 {
 	public class Alarm
 	{
-		public delegate void AlarmDelegat();
+		public string Tip { get; set; } = "Pozarni";
+		public delegate void AlarmDelegat(Alarm koZvoni);
 
 		public event AlarmDelegat USlucajuPozara;
 
 		public void OglasiSe()
 		{
-			USlucajuPozara?.Invoke();
+			//if (USlucajuPozara != null)
+			//{
+			//	USlucajuPozara();
+			//} isto kao ovo dole :) 
+
+			USlucajuPozara?.Invoke(this);
 		}
+
+
 	}
 }

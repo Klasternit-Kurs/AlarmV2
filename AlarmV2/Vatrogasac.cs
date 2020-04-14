@@ -25,9 +25,9 @@ namespace AlarmV2
 			}
 		}
 
-		public void Reakcija()
+		public void Reakcija(Alarm koZvoni)
 		{
-			Status = "Idem na scenu";
+			Status = koZvoni.Tip;
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;
